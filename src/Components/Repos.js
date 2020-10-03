@@ -7,7 +7,7 @@ const Repos = ({repos_url}) => {
         const {data} = await Axios.get(repos_url);
         setRepos(data);
     }
-    useEffect(() => {fetchRepos();}, [repos_url]);
+    useEffect(() => {fetchRepos();});
     return(
         <ListGroup>
             {repos.map(repo => (
